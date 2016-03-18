@@ -14,21 +14,24 @@ npm install --save const-func
 
 ## Usage
 ```javascript
-import constFunc from 'const-func'
+import always from 'const-func'
 
-constFunc()()
+const alwaysUndefined = always()
+alwaysUndefined()
   // => undefined
 
-constFunc(3)()
+const always3 = always(3)
+always3()
   // => 3
 
-constFunc('hi')('whatever')
+const alwaysHi = always('hi')
+alwaysHi('whatever')
   // => 'hi'
 ```
 
 ## API
 
-### constFunc(arg)
+### always(arg)
 Returns a function that always returns a constant value.
 
 #### arg
